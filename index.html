@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Techno Pest Control - Professional Pest Management Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #16a34a;
+      --primary-dark: #15803d;
+      --primary-light: #22c55e;
+      --secondary: #64748b;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --bg: #f0fdf4;
+      --bg-light: #ffffff;
+      --bg-gradient: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #22c55e 100%);
+      --text: #0f172a;
+      --text-light: #64748b;
+      --border: #bbf7d0;
+      --border-light: #dcfce7;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(22, 163, 74, 0.1);
+      --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(22, 163, 74, 0.1);
+      --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(22, 163, 74, 0.1);
+      --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(22, 163, 74, 0.15);
+      --shadow-2xl: 0 30px 60px rgba(22, 163, 74, 0.2);
+      --radius: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-2xl: 32px;
+      --radius-full: 9999px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky; top: 0; width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(24px) saturate(200%);
+      -webkit-backdrop-filter: blur(24px) saturate(200%);
+      border-bottom: 1px solid rgba(22, 163, 74, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 20px rgba(22, 163, 74, 0.15);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom-color: rgba(22, 163, 74, 0.2);
+    }
+    .navbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1400px; margin: 0 auto; padding: 0 3rem; height: 85px;
+    }
+    .navbar-logo {
+      display: flex; align-items: center; gap: 1rem; text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .navbar-logo:hover { transform: scale(1.05); }
+    .navbar-logo img {
+      width: 56px; height: 56px; border-radius: 14px; object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .navbar-logo:hover img {
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+      transform: rotate(8deg) scale(1.05);
+      border-color: var(--primary);
+    }
+    .navbar-logo span {
+      font-size: 1.65rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.8px;
+      text-shadow: 0 2px 10px rgba(22, 163, 74, 0.2);
+    }
+    .navbar-center { display: flex; gap: 0.5rem; }
+    .navbar-center a {
+      color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      padding: 0.75rem 1.5rem; border-radius: var(--radius-full);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative;
+    }
+    .navbar-center a:hover {
+      color: var(--primary);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(22, 163, 74, 0.1));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1);
+    }
+    .navbar-center a.active {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+    }
+
+    .navbar-actions { display: flex; align-items: center; gap: 1rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.85rem 1.8rem; font-size: 0.9rem; font-weight: 600;
+      border-radius: var(--radius-full);
+      cursor: pointer; text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 0; height: 0; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn:hover::before { width: 300px; height: 300px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 0; height: 0; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn-primary:hover::after {
+      width: 400px; height: 400px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(22, 163, 74, 0.45);
+    }
+    .btn-secondary {
+      background: white; color: var(--primary);
+      border: 2px solid var(--primary);
+      box-shadow: 0 2px 10px rgba(22, 163, 74, 0.15);
+    }
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-color: transparent;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(22, 163, 74, 0.35);
+    }
+    .btn-xl {
+      padding: 1.4rem 3.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      box-shadow: 0 8px 30px rgba(15, 81, 50, 0.3);
+    }
+
+    .login-dropdown { position: relative; }
+    .login-dropdown-content {
+      position: absolute; top: calc(100% + 1rem); right: 0;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-light);
+      min-width: 220px;
+      opacity: 0; visibility: hidden;
+      transform: translateY(-10px) scale(0.95);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1000;
+      overflow: hidden;
+    }
+    .login-dropdown.open .login-dropdown-content {
+      opacity: 1; visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+    .login-dropdown-content a {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 1rem 1.5rem; color: var(--text);
+      text-decoration: none; font-weight: 500;
+      border-bottom: 1px solid var(--border-light);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .login-dropdown-content a:last-child { border-bottom: none; }
+    .login-dropdown-content a:hover {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding-left: 1.75rem;
+    }
+    .login-dropdown-content a i {
+      font-size: 0.9rem;
+    }
+
+    .navbar-toggle {
+      display: none;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white; border: none;
+      font-size: 1.5rem; padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .navbar-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #22c55e 100%);
+      color: white;
+      padding: 12rem 2rem 14rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15), transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.25), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.1), transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.05) 100%),
+        url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23dots)"/></svg>');
+      opacity: 0.4;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.8; }
+    }
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 7.5vw, 6rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      letter-spacing: -3px;
+      line-height: 1.1;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.9) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+    .hero p {
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      max-width: 850px;
+      margin: 0 auto 3.5rem;
+      opacity: 0.98;
+      line-height: 1.8;
+      font-weight: 400;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    /* SERVICES & CONTACT */
+    .services-section, .contact-section {
+      padding: 8rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .section-title {
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      letter-spacing: -1px;
+    }
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .section-title::after {
+      content: ''; position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+      width: 100px; height: 5px; background: linear-gradient(90deg, var(--accent), var(--primary));
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 2.75rem;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--border-light);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0); transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .service-card::after {
+      content: ''; position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover::after { opacity: 1; }
+    .service-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: var(--shadow-2xl);
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    }
+    .service-icon {
+      width: 75px; height: 75px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 2.2rem; margin-bottom: 1.75rem;
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .service-icon::before {
+      content: ''; position: absolute; inset: -5px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity 0.5s ease;
+    }
+    .service-card:hover .service-icon {
+      transform: rotate(10deg) scale(1.15);
+      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.5);
+    }
+    .service-card:hover .service-icon::before {
+      opacity: 0.5;
+    }
+    .service-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .service-desc {
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: white;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-item::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, var(--primary), var(--accent));
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+    .contact-item:hover::before { transform: scaleY(1); }
+    .contact-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateX(8px);
+      border-color: var(--accent);
+    }
+    .contact-icon {
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.9rem;
+      flex-shrink: 0;
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .contact-item:hover .contact-icon {
+      transform: rotate(8deg) scale(1.12);
+      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.5);
+    }
+    .contact-item h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .contact-item p {
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(135deg, #15803d 0%, var(--primary) 50%, var(--accent) 100%);
+      color: white;
+      padding: 5.5rem 2rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    footer::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.15), transparent 50%),
+        url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23dots)"/></svg>');
+      opacity: 0.4;
+    }
+    .footer-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-links {
+      margin-bottom: 2rem;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .footer-text {
+      opacity: 0.9;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    /* MODALS */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal.show {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-content {
+      background: white;
+      border-radius: var(--radius-xl);
+      max-width: 850px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-xl);
+      animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid var(--border-light);
+      position: relative;
+    }
+    @keyframes modalSlideIn {
+      from {
+        transform: translateY(40px) scale(0.96);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+    .modal-header {
+      padding: 2.75rem 2.5rem 1.75rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(22, 163, 74, 0.2);
+    }
+    .modal-header h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    .modal-header p {
+      opacity: 0.95;
+      font-size: 0.95rem;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-close:hover {
+      background: white;
+      color: var(--primary);
+      transform: rotate(90deg) scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .modal-body {
+      padding: 2.5rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+    .modal-body h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      font-weight: 700;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-light);
+    }
+    .modal-body h3:first-child {
+      margin-top: 0;
+    }
+    .modal-body ul {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    .modal-body li {
+      margin: 0.75rem 0;
+      color: var(--text-light);
+    }
+    .modal-body strong {
+      color: var(--primary);
+    }
+
+    /* ANIMATIONS */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .navbar-inner { padding: 0 2rem; }
+      .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-inner { padding: 0 1.5rem; height: 75px; }
+      .navbar-center {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--border-light);
+      }
+      .navbar.open .navbar-center {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .navbar-center a {
+        width: 100%;
+        text-align: center;
+      }
+      .navbar-toggle { display: block; }
+      .navbar-actions {
+        gap: 0.75rem;
+      }
+      .btn {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.85rem;
+      }
+      .hero {
+        padding: 6rem 1.5rem 8rem;
+        min-height: 80vh;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+      .btn-xl {
+        padding: 1.2rem 2.5rem;
+        font-size: 1rem;
+      }
+      .services-section, .contact-section {
+        padding: 5rem 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+      .contact-icon {
+        margin: 0 auto;
+      }
+      .modal-content {
+        margin: 1rem;
+        max-height: 95vh;
+      }
+      .modal-header {
+        padding: 2rem 1.5rem 1rem;
+      }
+      .modal-header h2 {
+        font-size: 1.8rem;
+      }
+      .modal-body {
+        padding: 1.5rem;
+      }
+      footer {
+        padding: 3rem 1.5rem 2rem;
+      }
+      .footer-links a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar-logo span {
+        font-size: 1.3rem;
+      }
+      .navbar-logo img {
+        width: 48px;
+        height: 48px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.L9yROm9qCejcJaPKiBv4nAHaHa?pid=Api&P=0&h=180" alt="Techno Pest Control Logo" />
+        <span>Techno Pest Control</span>
+      </a>
+      <div class="navbar-center" id="navbarCenter">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="register.php" class="btn btn-primary">Register</a>
+        <a href="service_records.php" class="btn btn-secondary" style="display: none;" id="adminServicesBtn" title="Manage Services (Admin)">
+          <i class="fas fa-tools me-1"></i>Manage Services
+        </a>
+        <div class="login-dropdown" id="loginDropdown">
+          <button class="btn btn-secondary" id="loginBtn">Login <i class="fas fa-chevron-down"></i></button>
+          <div class="login-dropdown-content">
+            <a href="admin_login.php">Manager Login</a>
+            <a href="customer_login.php">Customer Login</a>
+          </div>
+        </div>
+      </div>
+      <button class="navbar-toggle" id="navbarToggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in-up">Professional Pest Control Solutions</h1>
+      <p class="fade-in-up">FDA Licensed • RA173 2012 • Eco-Friendly Treatments for Homes & Businesses</p>
+      <a href="register.php" class="btn btn-primary btn-xl fade-in-up float">
+        Book your Service <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <h2 class="section-title">Our Professional Services</h2>
+      <p class="section-subtitle">Comprehensive pest control solutions tailored to your needs</p>
+    </div>
+    <div class="services-grid" id="servicesContainer"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Contact Information</h2>
+      <p class="section-subtitle">We're here to help protect your property</p>
+    </div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div><h4>Phone</h4><p>(+63) 123 456 7890</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div><h4>Email</h4><p>info@technopestcontrol.com</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div><h4>Address</h4><p>Alijis, Bacolod City, Negros Occidental</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+        <div><h4>Business Hours</h4><p>Mon-Sun: 8:00 AM - 5:00 PM</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a onclick="openModal('privacyModal')">Privacy Policy</a>
+        <a onclick="openModal('termsModal')">Terms of Service</a>
+      </div>
+      <p class="footer-text">
+        © 2025 Techno Pest Control. All rights reserved.<br>
+        RA173 2012 Licensed • FDA-Approved • Compliant with Republic Act No. 10173 (Data Privacy Act of 2012)
+      </p>
+    </div>
+  </footer>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal" id="privacyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Privacy Policy</h2>
+        <p>Fully Compliant with RA 10173 (Data Privacy Act of 2012)</p>
+        <button class="modal-close" onclick="closeModal('privacyModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Effective Date: November 20, 2025</strong></p>
+        <p>Techno Pest Control is committed to protecting your privacy in full compliance with <strong>Republic Act No. 10173</strong>, the <strong>Data Privacy Act of 2012</strong>.</p>
+        <h3>Information We Collect</h3>
+        <ul>
+          <li>Full name, contact number, email, and address</li>
+          <li>Property details and service requirements</li>
+          <li>Booking and payment information</li>
+        </ul>
+        <h3>How We Use Your Data</h3>
+        <p>Solely to schedule services, send reminders, issue receipts, and improve our operations.</p>
+        <h3>Data Security</h3>
+        <p>We use encryption, access controls, and regular security audits.</p>
+        <h3>Your Rights</h3>
+        <ul>
+          <li>Right to access, correct, or delete your data</li>
+          <li>Right to be informed and object</li>
+          <li>Right to file a complaint with the NPC</li>
+        </ul>
+        <p>We <strong>never sell or share</strong> your data without consent.</p>
+        <p><strong>Contact our DPO:</strong> dpo@technopestcontrol.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE MODAL -->
+  <div class="modal" id="termsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Terms of Service</h2>
+        <p>Professional Service with Guaranteed Results</p>
+        <button class="modal-close" onclick="closeModal('termsModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Last Updated: November 20, 2025</strong></p>
+        <h3>Service & Payment</h3>
+        <ul>
+          <li>50% downpayment for jobs over ₱5,000</li>
+          <li>Full payment upon completion</li>
+          <li>Cash, GCash, Bank Transfer accepted</li>
+        </ul>
+        <h3>Warranty</h3>
+        <ul>
+          <li>Termite Control: Up to 5 years</li>
+          <li>General Pest: 3–6 months free re-service</li>
+          <li>Guaranteed results or free return</li>
+        </ul>
+        <h3>Cancellation</h3>
+        <p>Free cancellation up to 24 hours before appointment.</p>
+        <p>Thank you for choosing Techno Pest Control — your trusted, licensed partner.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal Functions
+    function openModal(id) {
+      document.getElementById(id).classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+    document.querySelectorAll('.modal').forEach(m => {
+      m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); });
+    });
+
+    // Navbar & Dropdown
+    const navbar = document.getElementById('navbar');
+    const navbarToggle = document.getElementById('navbarToggle');
+    const loginDropdown = document.getElementById('loginDropdown');
+    const loginBtn = document.getElementById('loginBtn');
+
+    navbarToggle.addEventListener('click', e => { e.stopPropagation(); navbar.classList.toggle('open'); });
+    document.addEventListener('click', e => { if (!navbar.contains(e.target)) navbar.classList.remove('open'); });
+    loginBtn.addEventListener('click', e => { e.stopPropagation(); loginDropdown.classList.toggle('open'); });
+    document.addEventListener('click', e => { if (!loginDropdown.contains(e.target)) loginDropdown.classList.remove('open'); });
+
+    // Service Icons Mapping
+    const serviceIcons = {
+      'Termite Control': "<i class='fas fa-bug'></i>",
+      'General Pest Control': "<i class='fas fa-shield-virus'></i>",
+      'Rodent Control': "<i class='fas fa-mouse'></i>",
+      'Mosquito Control': "<i class='fas fa-mosquito'></i>",
+      'Cockroach Control': "<i class='fas fa-bug'></i>",
+      'Fumigation': "<i class='fas fa-cloud'></i>",
+      'Sanitation & Disinfection': "<i class='fas fa-pump-soap'></i>",
+      'default': "<i class='fas fa-tools'></i>"
+    };
+
+    function getServiceIcon(category, title) {
+      if (category && serviceIcons[category]) return serviceIcons[category];
+      if (title) {
+        for (const [key, icon] of Object.entries(serviceIcons)) {
+          if (title.toLowerCase().includes(key.toLowerCase())) return icon;
+        }
+      }
+      return serviceIcons['default'];
+    }
+
+    // Fetch Services from service_records.php
+    async function loadServices() {
+      const container = document.getElementById('servicesContainer');
+      container.innerHTML = '<div style="text-align: center; padding: 3rem; color: var(--text-light);"><i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i><p>Loading services...</p></div>';
+
+      try {
+        const response = await fetch('service_records.php?action=get_services');
+
+        // Check if response is OK
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        // Debug logging
+        console.log('Services API Response:', data);
+
+        if (data.success && data.services && data.services.length > 0) {
+          container.innerHTML = '';
+          data.services.forEach((s, i) => {
+            const card = document.createElement('div');
+            card.className = 'service-card fade-in-up';
+            card.style.animationDelay = `${i * 0.15}s`;
+            const icon = getServiceIcon(s.category, s.title);
+            card.innerHTML = `
+              <div class="service-icon">${icon}</div>
+              <h3 class="service-title">${s.title || 'Unnamed Service'}</h3>
+              <p class="service-desc">${s.description || 'Professional pest control service tailored to your needs.'}</p>
+            `;
+            container.appendChild(card);
+          });
+        } else {
+          // Show more helpful message
+          let message = 'No services available at the moment.';
+          if (data.error) {
+            message += '<br><small style="color: var(--text-light);">' + data.error + '</small>';
+          }
+          if (data.count !== undefined) {
+            message += '<br><small style="color: var(--text-light);">Found ' + data.count + ' service(s)</small>';
+          }
+          container.innerHTML = '<div style="text-align: center; padding: 3rem; color: var(--text-light);">' + message + '</div>';
+        }
+      } catch (error) {
+        console.error('Error loading services:', error);
+        const errorMsg = error.message || 'Unknown error occurred';
+        container.innerHTML = `
+          <div style="text-align: center; padding: 3rem; color: var(--danger);">
+            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+            <p style="margin-bottom: 1rem;">Error loading services. Please refresh the page.</p>
+            <small style="color: var(--text-light); display: block;">Error: ${errorMsg}</small>
+            <small style="color: var(--text-light); display: block; margin-top: 0.5rem;">Check browser console (F12) for more details.</small>
+          </div>
+        `;
+      }
+    }
+
+    // Load services on page load
+    loadServices();
+
+    // Check if user is admin (has session) and show admin button
+    // This is a simple check - you may want to enhance this with actual session verification
+    async function checkAdminAccess() {
+      try {
+        // Try to access a protected endpoint to check if logged in
+        const response = await fetch('service_records.php', { 
+          method: 'HEAD',
+          credentials: 'same-origin'
+        });
+        // If we can access it, show the button (this is a simple check)
+        // In production, you'd want a proper API endpoint to check admin status
+        const adminBtn = document.getElementById('adminServicesBtn');
+        if (adminBtn) {
+          // Show button - you can add more sophisticated checks here
+          // For now, we'll show it but it will redirect to login if not authenticated
+          adminBtn.style.display = 'inline-flex';
+        }
+      } catch (error) {
+        // Silently fail - button stays hidden
+        console.log('Admin check failed:', error);
+      }
+    }
+
+    // Optional: Check admin access on load
+    // Uncomment the line below if you want to auto-detect admin status
+    // checkAdminAccess();
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

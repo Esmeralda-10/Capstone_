@@ -1,0 +1,344 @@
+[2025-11-22 19:50:00] === Backup started at 2025-11-22 19:50:00 ===
+[2025-11-22 19:50:00] Backing up database...
+[2025-11-22 19:50:00] ERROR: Database backup failed
+[2025-11-22 19:51:57] === Backup started at 2025-11-22 19:51:57 ===
+[2025-11-22 19:51:57] Backing up database...
+[2025-11-22 19:51:57] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_19-51-57.sql" 2>&1
+[2025-11-22 19:51:57] mysqldump failed, trying PDO fallback method...
+[2025-11-22 19:51:57] Backing up database using PDO method...
+[2025-11-22 19:51:57] Backing up table: active_ingredients
+[2025-11-22 19:51:57] Backing up table: announcements
+[2025-11-22 19:51:57] Backing up table: audit_logs
+[2025-11-22 19:51:57] Backing up table: barcode_map
+[2025-11-22 19:51:57] Backing up table: barcodes
+[2025-11-22 19:51:57] Backing up table: booking_pictures
+[2025-11-22 19:51:57] Backing up table: chemical_deductions
+[2025-11-22 19:51:57] Backing up table: email_config
+[2025-11-22 19:51:57] Backing up table: email_templates
+[2025-11-22 19:51:57] Backing up table: inventory
+[2025-11-22 19:51:57] Backing up table: maintenance_records
+[2025-11-22 19:51:57] Backing up table: notifications
+[2025-11-22 19:51:57] Backing up table: price_ranges
+[2025-11-22 19:51:57] Backing up table: service_bookings
+[2025-11-22 19:51:57] Backing up table: service_inventory
+[2025-11-22 19:51:57] Backing up table: service_price_ranges
+[2025-11-22 19:51:57] Backing up table: services
+[2025-11-22 19:51:57] Backing up table: structure_types
+[2025-11-22 19:51:57] Backing up table: structure_types_tmp
+[2025-11-22 19:51:57] Backing up table: users
+[2025-11-22 19:51:57] Database backup created using PDO: database_backup_2025-11-22_19-51-57.sql
+[2025-11-22 19:51:57] Backing up files...
+[2025-11-22 19:51:57] Files backup created: files_backup_2025-11-22_19-51-57.tar.gz
+[2025-11-22 19:51:57] Uploading to AWS S3...
+[2025-11-22 19:51:57] ERROR: AWS S3 upload failed
+[2025-11-22 19:52:55] === Backup started at 2025-11-22 19:52:55 ===
+[2025-11-22 19:52:55] Backing up database...
+[2025-11-22 19:52:55] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_19-52-55.sql" 2>&1
+[2025-11-22 19:52:56] mysqldump failed, trying PDO fallback method...
+[2025-11-22 19:52:56] Backing up database using PDO method...
+[2025-11-22 19:52:56] Backing up table: active_ingredients
+[2025-11-22 19:52:56] Backing up table: announcements
+[2025-11-22 19:52:56] Backing up table: audit_logs
+[2025-11-22 19:52:56] Backing up table: barcode_map
+[2025-11-22 19:52:56] Backing up table: barcodes
+[2025-11-22 19:52:56] Backing up table: booking_pictures
+[2025-11-22 19:52:56] Backing up table: chemical_deductions
+[2025-11-22 19:52:56] Backing up table: email_config
+[2025-11-22 19:52:56] Backing up table: email_templates
+[2025-11-22 19:52:56] Backing up table: inventory
+[2025-11-22 19:52:56] Backing up table: maintenance_records
+[2025-11-22 19:52:56] Backing up table: notifications
+[2025-11-22 19:52:56] Backing up table: price_ranges
+[2025-11-22 19:52:56] Backing up table: service_bookings
+[2025-11-22 19:52:56] Backing up table: service_inventory
+[2025-11-22 19:52:56] Backing up table: service_price_ranges
+[2025-11-22 19:52:56] Backing up table: services
+[2025-11-22 19:52:56] Backing up table: structure_types
+[2025-11-22 19:52:56] Backing up table: structure_types_tmp
+[2025-11-22 19:52:56] Backing up table: users
+[2025-11-22 19:52:56] Database backup created using PDO: database_backup_2025-11-22_19-52-56.sql
+[2025-11-22 19:52:56] Backing up files...
+[2025-11-22 19:52:56] Files backup created: files_backup_2025-11-22_19-52-56.tar.gz
+[2025-11-22 19:52:56] Uploading to AWS S3...
+[2025-11-22 19:52:56] WARNING: AWS S3 credentials not configured. Skipping cloud upload.
+[2025-11-22 19:52:56] Please configure AWS credentials in cloud_config.php to enable cloud uploads.
+[2025-11-22 19:52:56] Uploading to AWS S3...
+[2025-11-22 19:52:56] WARNING: AWS S3 credentials not configured. Skipping cloud upload.
+[2025-11-22 19:52:56] Please configure AWS credentials in cloud_config.php to enable cloud uploads.
+[2025-11-22 19:52:56] Cleaning old backups...
+[2025-11-22 19:52:56] === Backup completed successfully ===
+[2025-11-22 20:20:15] === Backup started at 2025-11-22 20:20:15 ===
+[2025-11-22 20:20:15] Backing up all website data...
+[2025-11-22 20:20:15] Step 1/3: Backing up database...
+[2025-11-22 20:20:15] Backing up database...
+[2025-11-22 20:20:16] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_20-20-15.sql" 2>&1
+[2025-11-22 20:20:16] mysqldump failed, trying PDO fallback method...
+[2025-11-22 20:20:16] Backing up database using PDO method...
+[2025-11-22 20:20:16] Backing up table: active_ingredients
+[2025-11-22 20:20:16] Backing up table: announcements
+[2025-11-22 20:20:16] Backing up table: audit_logs
+[2025-11-22 20:20:16] Backing up table: barcode_map
+[2025-11-22 20:20:16] Backing up table: barcodes
+[2025-11-22 20:20:16] Backing up table: booking_pictures
+[2025-11-22 20:20:16] Backing up table: chemical_deductions
+[2025-11-22 20:20:16] Backing up table: email_config
+[2025-11-22 20:20:16] Backing up table: email_templates
+[2025-11-22 20:20:16] Backing up table: inventory
+[2025-11-22 20:20:16] Backing up table: maintenance_records
+[2025-11-22 20:20:16] Backing up table: notifications
+[2025-11-22 20:20:16] Backing up table: price_ranges
+[2025-11-22 20:20:16] Backing up table: service_bookings
+[2025-11-22 20:20:16] Backing up table: service_inventory
+[2025-11-22 20:20:16] Backing up table: service_price_ranges
+[2025-11-22 20:20:16] Backing up table: services
+[2025-11-22 20:20:16] Backing up table: structure_types
+[2025-11-22 20:20:16] Backing up table: structure_types_tmp
+[2025-11-22 20:20:16] Backing up table: users
+[2025-11-22 20:20:16] Database backup created using PDO: database_backup_2025-11-22_20-20-16.sql
+[2025-11-22 20:20:16] ✓ Database backup completed
+[2025-11-22 20:20:16] Step 2/3: Backing up website files...
+[2025-11-22 20:20:16] Backing up all website files and directories...
+[2025-11-22 20:20:16] Backing up directory: uploads
+[2025-11-22 20:20:16] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-22 20:20:16] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-22 20:20:16] Backing up directory: cloud_storage
+[2025-11-22 20:20:16] Backing up file: cloud_config.php
+[2025-11-22 20:24:05] === Backup started at 2025-11-22 20:24:05 ===
+[2025-11-22 20:24:05] Backing up all website data...
+[2025-11-22 20:24:05] Step 1/3: Backing up database...
+[2025-11-22 20:24:05] Backing up database...
+[2025-11-22 20:24:05] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_20-24-05.sql" 2>&1
+[2025-11-22 20:24:06] mysqldump failed, trying PDO fallback method...
+[2025-11-22 20:24:06] Backing up database using PDO method...
+[2025-11-22 20:24:06] Backing up table: active_ingredients
+[2025-11-22 20:24:06] Backing up table: announcements
+[2025-11-22 20:24:06] Backing up table: audit_logs
+[2025-11-22 20:24:06] Backing up table: barcode_map
+[2025-11-22 20:24:06] Backing up table: barcodes
+[2025-11-22 20:24:06] Backing up table: booking_pictures
+[2025-11-22 20:24:06] Backing up table: chemical_deductions
+[2025-11-22 20:24:06] Backing up table: email_config
+[2025-11-22 20:24:06] Backing up table: email_templates
+[2025-11-22 20:24:06] Backing up table: inventory
+[2025-11-22 20:24:06] Backing up table: maintenance_records
+[2025-11-22 20:24:06] Backing up table: notifications
+[2025-11-22 20:24:06] Backing up table: price_ranges
+[2025-11-22 20:24:06] Backing up table: service_bookings
+[2025-11-22 20:24:06] Backing up table: service_inventory
+[2025-11-22 20:24:06] Backing up table: service_price_ranges
+[2025-11-22 20:24:06] Backing up table: services
+[2025-11-22 20:24:06] Backing up table: structure_types
+[2025-11-22 20:24:06] Backing up table: structure_types_tmp
+[2025-11-22 20:24:06] Backing up table: users
+[2025-11-22 20:24:06] Database backup created using PDO: database_backup_2025-11-22_20-24-06.sql
+[2025-11-22 20:24:06] ✓ Database backup completed
+[2025-11-22 20:24:06] Step 2/3: Backing up website files...
+[2025-11-22 20:24:06] Backing up all website files and directories...
+[2025-11-22 20:24:06] Backing up directory: uploads
+[2025-11-22 20:24:06] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-22 20:24:06] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-22 20:24:06] Backing up directory: cloud_storage
+[2025-11-22 20:24:06] Backing up file: cloud_config.php
+[2025-11-22 20:26:15] === Backup started at 2025-11-22 20:26:15 ===
+[2025-11-22 20:26:15] Backing up all website data...
+[2025-11-22 20:26:15] Step 1/3: Backing up database...
+[2025-11-22 20:26:15] Backing up database...
+[2025-11-22 20:26:16] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_20-26-15.sql" 2>&1
+[2025-11-22 20:26:16] mysqldump failed, trying PDO fallback method...
+[2025-11-22 20:26:16] Backing up database using PDO method...
+[2025-11-22 20:26:16] Backing up table: active_ingredients
+[2025-11-22 20:26:16] Backing up table: announcements
+[2025-11-22 20:26:16] Backing up table: audit_logs
+[2025-11-22 20:26:16] Backing up table: barcode_map
+[2025-11-22 20:26:16] Backing up table: barcodes
+[2025-11-22 20:26:16] Backing up table: booking_pictures
+[2025-11-22 20:26:16] Backing up table: chemical_deductions
+[2025-11-22 20:26:16] Backing up table: email_config
+[2025-11-22 20:26:16] Backing up table: email_templates
+[2025-11-22 20:26:16] Backing up table: inventory
+[2025-11-22 20:26:16] Backing up table: maintenance_records
+[2025-11-22 20:26:16] Backing up table: notifications
+[2025-11-22 20:26:16] Backing up table: price_ranges
+[2025-11-22 20:26:16] Backing up table: service_bookings
+[2025-11-22 20:26:16] Backing up table: service_inventory
+[2025-11-22 20:26:16] Backing up table: service_price_ranges
+[2025-11-22 20:26:16] Backing up table: services
+[2025-11-22 20:26:16] Backing up table: structure_types
+[2025-11-22 20:26:16] Backing up table: structure_types_tmp
+[2025-11-22 20:26:16] Backing up table: users
+[2025-11-22 20:26:16] Database backup created using PDO: database_backup_2025-11-22_20-26-16.sql
+[2025-11-22 20:26:16] ✓ Database backup completed
+[2025-11-22 20:26:16] Step 2/3: Backing up website files...
+[2025-11-22 20:26:16] Backing up all website files and directories...
+[2025-11-22 20:26:16] Backing up directory: uploads
+[2025-11-22 20:26:16] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-22 20:26:16] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-22 20:26:16] Backing up directory: cloud_storage
+[2025-11-22 20:26:16] Backing up file: cloud_config.php
+[2025-11-22 20:28:25] NOTE: ZipArchive extension not found. Using alternative compression methods.
+[2025-11-22 20:28:25] To enable ZipArchive in Laragon: php.ini -> uncomment 'extension=zip'
+[2025-11-22 20:28:25] === Backup started at 2025-11-22 20:28:25 ===
+[2025-11-22 20:28:25] Backing up all website data...
+[2025-11-22 20:28:25] Step 1/3: Backing up database...
+[2025-11-22 20:28:25] Backing up database...
+[2025-11-22 20:28:25] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-22_20-28-25.sql" 2>&1
+[2025-11-22 20:28:25] mysqldump failed, trying PDO fallback method...
+[2025-11-22 20:28:25] Backing up database using PDO method...
+[2025-11-22 20:28:25] Backing up table: active_ingredients
+[2025-11-22 20:28:25] Backing up table: announcements
+[2025-11-22 20:28:25] Backing up table: audit_logs
+[2025-11-22 20:28:25] Backing up table: barcode_map
+[2025-11-22 20:28:25] Backing up table: barcodes
+[2025-11-22 20:28:25] Backing up table: booking_pictures
+[2025-11-22 20:28:25] Backing up table: chemical_deductions
+[2025-11-22 20:28:25] Backing up table: email_config
+[2025-11-22 20:28:25] Backing up table: email_templates
+[2025-11-22 20:28:25] Backing up table: inventory
+[2025-11-22 20:28:25] Backing up table: maintenance_records
+[2025-11-22 20:28:25] Backing up table: notifications
+[2025-11-22 20:28:25] Backing up table: price_ranges
+[2025-11-22 20:28:25] Backing up table: service_bookings
+[2025-11-22 20:28:25] Backing up table: service_inventory
+[2025-11-22 20:28:25] Backing up table: service_price_ranges
+[2025-11-22 20:28:25] Backing up table: services
+[2025-11-22 20:28:25] Backing up table: structure_types
+[2025-11-22 20:28:25] Backing up table: structure_types_tmp
+[2025-11-22 20:28:25] Backing up table: users
+[2025-11-22 20:28:25] Database backup created using PDO: database_backup_2025-11-22_20-28-25.sql
+[2025-11-22 20:28:25] ✓ Database backup completed
+[2025-11-22 20:28:25] Step 2/3: Backing up website files...
+[2025-11-22 20:28:25] Backing up all website files and directories...
+[2025-11-22 20:28:25] Backing up directory: uploads
+[2025-11-22 20:28:26] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-22 20:28:26] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-22 20:28:26] Backing up directory: cloud_storage
+[2025-11-22 20:28:26] Backing up file: cloud_config.php
+[2025-11-22 20:28:26] ZipArchive not available, using alternative method...
+[2025-11-22 20:28:32] Website files backup created: website_files_backup_2025-11-22_20-28-25.zip
+[2025-11-22 20:28:32] ✓ Files backup completed
+[2025-11-22 20:28:32] Step 3/3: Copying backups to cloud storage...
+[2025-11-22 20:28:32] Backup copied to local cloud storage: database_backup_2025-11-22_20-28-25.sql
+[2025-11-22 20:28:32] Syncing all website data to cloud storage...
+[2025-11-22 20:28:32] Synced: uploads
+[2025-11-22 20:28:32] Synced: backups
+[2025-11-22 20:28:32] All website data synced to cloud storage
+[2025-11-22 20:28:32] Backup copied to local cloud storage: website_files_backup_2025-11-22_20-28-25.zip
+[2025-11-22 20:28:32] Syncing all website data to cloud storage...
+[2025-11-22 20:28:32] Synced: uploads
+[2025-11-22 20:28:32] Synced: backups
+[2025-11-22 20:28:32] All website data synced to cloud storage
+[2025-11-22 20:28:32] ✓ Backups copied to cloud storage
+[2025-11-22 20:28:32] Uploading to Backblaze B2...
+[2025-11-22 20:28:32] WARNING: Backblaze B2 credentials not configured. Skipping cloud upload.
+[2025-11-22 20:28:32] Please configure Backblaze credentials in cloud_config.php to enable cloud uploads.
+[2025-11-22 20:28:32] Uploading to Backblaze B2...
+[2025-11-22 20:28:32] WARNING: Backblaze B2 credentials not configured. Skipping cloud upload.
+[2025-11-22 20:28:32] Please configure Backblaze credentials in cloud_config.php to enable cloud uploads.
+[2025-11-22 20:28:32] Cleaning old backups...
+[2025-11-22 20:28:32] === Backup completed successfully ===
+[2025-11-23 04:56:55] NOTE: ZipArchive extension not found. Using alternative compression methods.
+[2025-11-23 04:56:55] To enable ZipArchive in Laragon: php.ini -> uncomment 'extension=zip'
+[2025-11-23 04:56:55] === Backup started at 2025-11-23 04:56:55 ===
+[2025-11-23 04:56:55] Backing up all website data...
+[2025-11-23 04:56:55] Step 1/3: Backing up database...
+[2025-11-23 04:56:55] Backing up database...
+[2025-11-23 04:56:55] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-23_04-56-55.sql" 2>&1
+[2025-11-23 04:56:55] mysqldump failed, trying PDO fallback method...
+[2025-11-23 04:56:55] Backing up database using PDO method...
+[2025-11-23 04:56:55] Backing up table: active_ingredients
+[2025-11-23 04:56:55] Backing up table: announcements
+[2025-11-23 04:56:55] Backing up table: audit_logs
+[2025-11-23 04:56:55] Backing up table: barcode_map
+[2025-11-23 04:56:55] Backing up table: barcodes
+[2025-11-23 04:56:55] Backing up table: booking_pictures
+[2025-11-23 04:56:55] Backing up table: chemical_deductions
+[2025-11-23 04:56:55] Backing up table: email_config
+[2025-11-23 04:56:55] Backing up table: email_templates
+[2025-11-23 04:56:55] Backing up table: inventory
+[2025-11-23 04:56:55] Backing up table: maintenance_records
+[2025-11-23 04:56:55] Backing up table: notifications
+[2025-11-23 04:56:55] Backing up table: price_ranges
+[2025-11-23 04:56:55] Backing up table: service_bookings
+[2025-11-23 04:56:55] Backing up table: service_inventory
+[2025-11-23 04:56:55] Backing up table: service_price_ranges
+[2025-11-23 04:56:55] Backing up table: services
+[2025-11-23 04:56:55] Backing up table: structure_types
+[2025-11-23 04:56:55] Backing up table: structure_types_tmp
+[2025-11-23 04:56:55] Backing up table: users
+[2025-11-23 04:56:55] Database backup created using PDO: database_backup_2025-11-23_04-56-55.sql
+[2025-11-23 04:56:55] ✓ Database backup completed
+[2025-11-23 04:56:55] Step 2/3: Backing up website files...
+[2025-11-23 04:56:55] Backing up all website files and directories...
+[2025-11-23 04:56:55] Backing up directory: uploads
+[2025-11-23 04:56:55] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-23 04:56:55] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-23 04:56:55] Backing up directory: cloud_storage
+[2025-11-23 04:56:55] Backing up file: cloud_config.php
+[2025-11-23 04:56:55] ZipArchive not available, using alternative method...
+[2025-11-23 04:56:58] Website files backup created: website_files_backup_2025-11-23_04-56-55.zip
+[2025-11-23 04:56:58] ✓ Files backup completed
+[2025-11-23 04:56:58] Step 3/3: Copying backups to cloud storage...
+[2025-11-23 04:56:58] Backup copied to local cloud storage: database_backup_2025-11-23_04-56-55.sql
+[2025-11-23 04:56:58] Syncing all website data to cloud storage...
+[2025-11-23 04:56:58] Synced: uploads
+[2025-11-23 04:56:58] Synced: backups
+[2025-11-23 04:56:58] All website data synced to cloud storage
+[2025-11-23 04:56:58] Backup copied to local cloud storage: website_files_backup_2025-11-23_04-56-55.zip
+[2025-11-23 04:56:58] Syncing all website data to cloud storage...
+[2025-11-23 04:56:58] Synced: uploads
+[2025-11-23 04:56:58] Synced: backups
+[2025-11-23 04:56:58] All website data synced to cloud storage
+[2025-11-23 04:56:58] ✓ Backups copied to cloud storage
+[2025-11-23 04:56:58] Uploading to Backblaze B2...
+[2025-11-23 04:56:58] WARNING: Backblaze B2 credentials not configured. Skipping cloud upload.
+[2025-11-23 04:56:58] Please configure Backblaze credentials in cloud_config.php to enable cloud uploads.
+[2025-11-23 04:56:58] Uploading to Backblaze B2...
+[2025-11-23 04:56:58] WARNING: Backblaze B2 credentials not configured. Skipping cloud upload.
+[2025-11-23 04:56:58] Please configure Backblaze credentials in cloud_config.php to enable cloud uploads.
+[2025-11-23 04:56:58] Cleaning old backups...
+[2025-11-23 04:56:58] === Backup completed successfully ===
+[2025-11-23 04:59:08] NOTE: ZipArchive extension not found. Using alternative compression methods.
+[2025-11-23 04:59:08] To enable ZipArchive in Laragon: php.ini -> uncomment 'extension=zip'
+[2025-11-23 04:59:08] === Backup started at 2025-11-23 04:59:08 ===
+[2025-11-23 04:59:08] Backing up all website data...
+[2025-11-23 04:59:08] Step 1/3: Backing up database...
+[2025-11-23 04:59:08] Backing up database...
+[2025-11-23 04:59:08] Executing: "mysqldump" -h "localhost" -u "root" "pest control" > "C:\laragon\www\capstone/backups/database_backup_2025-11-23_04-59-08.sql" 2>&1
+[2025-11-23 04:59:08] mysqldump failed, trying PDO fallback method...
+[2025-11-23 04:59:08] Backing up database using PDO method...
+[2025-11-23 04:59:08] Backing up table: active_ingredients
+[2025-11-23 04:59:08] Backing up table: announcements
+[2025-11-23 04:59:08] Backing up table: audit_logs
+[2025-11-23 04:59:08] Backing up table: barcode_map
+[2025-11-23 04:59:08] Backing up table: barcodes
+[2025-11-23 04:59:08] Backing up table: booking_pictures
+[2025-11-23 04:59:08] Backing up table: chemical_deductions
+[2025-11-23 04:59:08] Backing up table: email_config
+[2025-11-23 04:59:08] Backing up table: email_templates
+[2025-11-23 04:59:08] Backing up table: inventory
+[2025-11-23 04:59:08] Backing up table: maintenance_records
+[2025-11-23 04:59:08] Backing up table: notifications
+[2025-11-23 04:59:08] Backing up table: price_ranges
+[2025-11-23 04:59:08] Backing up table: service_bookings
+[2025-11-23 04:59:08] Backing up table: service_inventory
+[2025-11-23 04:59:08] Backing up table: service_price_ranges
+[2025-11-23 04:59:08] Backing up table: services
+[2025-11-23 04:59:08] Backing up table: structure_types
+[2025-11-23 04:59:08] Backing up table: structure_types_tmp
+[2025-11-23 04:59:08] Backing up table: users
+[2025-11-23 04:59:08] Database backup created using PDO: database_backup_2025-11-23_04-59-08.sql
+[2025-11-23 04:59:08] ✓ Database backup completed
+[2025-11-23 04:59:08] Step 2/3: Backing up website files...
+[2025-11-23 04:59:08] Backing up all website files and directories...
+[2025-11-23 04:59:08] Backing up directory: uploads
+[2025-11-23 04:59:08] Directory not found, skipping: C:\laragon\www\capstone/images
+[2025-11-23 04:59:08] Directory not found, skipping: C:\laragon\www\capstone/documents
+[2025-11-23 04:59:08] Backing up directory: cloud_storage
+[2025-11-23 04:59:08] Backing up file: cloud_config.php
+[2025-11-23 04:59:08] ZipArchive not available, using alternative method...
+[2025-11-23 04:59:11] Website files backup created: website_files_backup_2025-11-23_04-59-08.zip
+[2025-11-23 04:59:11] ✓ Files backup completed
+[2025-11-23 04:59:11] Step 3/3: Copying backups to cloud storage...
+[2025-11-23 04:59:11] Backup copied to local cloud storage: database_backup_2025-11-23_04-59-08.sql
+[2025-11-23 04:59:11] Syncing all website data to cloud storage...
+[2025-11-23 04:59:11] Synced: uploads
